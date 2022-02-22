@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { MdOutlineDarkMode } from "react-icons/md";
 
-import { Menu, CardPlaceholder } from "../components/ui";
+import { Menu } from "../components/ui";
 
 export default function Home() {
   return (
@@ -19,25 +18,21 @@ export default function Home() {
         <div className="container">
           <Menu />
           <section className="App">
-            <h1 className="App__copy">Mis métodos de pago</h1>
-            <p className="App__copy">
-              Aquí puedes encontrar todas tus tarjetas guardadas.
+            <h1 className="App__title">¡Buenos días!</h1>
+            <p className="App__copy App__copy--alt">
+              Esta es la página de inicio de nuestro proyecto de tarjetas.
+              Oprime la opción deseada.
             </p>
-            <div className="App__card-list">
-              <CardPlaceholder />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around",
+              }}
+            >
+              <a className="button App__button">Ver mis tarjetas</a>
+              <a className="button App__button">Agregar tarjeta</a>
             </div>
-            <footer className="App__footer">
-              <p className="App__small">
-                <small>
-                  🔒 La información de la tarjeta se almacena encriptada,
-                  <br />
-                  para que ningún tercero pueda acceder a esta información.
-                </small>
-              </p>
-              <span className="App__theme-btn">
-                <MdOutlineDarkMode />
-              </span>
-            </footer>
           </section>
         </div>
       </main>

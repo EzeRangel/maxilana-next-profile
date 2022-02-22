@@ -27,6 +27,11 @@ const Menu = () => {
       <ul className="Menu__list">
         <li className="Menu__item">
           <Link href="/">
+            Inicio
+          </Link>
+        </li>
+        <li className="Menu__item">
+          <Link href="/">
             Ver tarjetas
           </Link>
         </li>

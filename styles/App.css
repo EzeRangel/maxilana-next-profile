@@ -12,6 +12,10 @@
   margin-bottom: 16px;
 }
 
+.App__copy--alt {
+  color: #00827e;
+}
+
 .App__footer {
   display: flex;
   flex-direction: row;
@@ -33,4 +37,9 @@
 
 .App__card-list {
   margin: 12px 0;
+}
+
+.App__button {
+  font-size: 12px;
+  margin: 0 4px;
 }
