@@ -1,0 +1,36 @@
+.App {
+  padding: 0;
+}
+
+.App__title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.App__copy {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.App__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.App__small {
+  font-size: 12px;
+  margin-right: 12px;
+}
+
+.App__theme-btn {
+  padding: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-self: center;
+}
+
+.App__card-list {
+  margin: 12px 0;
+}

@@ -1,0 +1,20 @@
+.root {
+  border-radius: 10px;
+  max-width: 330px;
+  height: 194px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 10px #01437d1a;
+  border: 1px dashed #01437d;
+  padding: 16px;
+}
+
+.hasError {
+  border: 1px dashed red;
+  color: red;
+}
+
+.theme-dark .root {
+  border: 1px dashed #864879;
+}
