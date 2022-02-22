@@ -1,0 +1,54 @@
+.Menu {
+  width: 220px;
+  max-width: 220px;
+  margin-right: 16px;
+  overflow-x: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.Menu--hidden {
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Menu--hidden > .Menu__list {
+  display: none;
+}
+
+.Menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Menu__title {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.Menu__toggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-self: center;
+}
+
+.Menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu__item,
+.Menu__item > a {
+  color: inherit;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.Menu__item:hover {
+  cursor: pointer;
+}
