@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Tarjeta de nómina",
+    "ccending": 4241,
+    "ccholder": "Ezequiel Rangel",
+    "ccdate": "08/2024",
+    "cctype": "mastercard"
+  },
+  {
+    "id": 2,
+    "title": "Tarjeta BBVA",
+    "ccending": 4567,
+    "ccholder": "Efraín Rochín",
+    "ccdate": "10/2022",
+    "cctype": "amex"
+  },
+  {
+    "id": 3,
+    "title": "Nómina Banbajío",
+    "ccending": 8765,
+    "ccholder": "Omar López",
+    "ccdate": "04/2023",
+    "cctype": "visa"
+  }
+]

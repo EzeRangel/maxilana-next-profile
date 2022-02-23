@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "label": "Inicio",
+    "href": "/"
+  },
+  {
+    "id": 2,
+    "label": "Ver tarjetas",
+    "href": "/tarjetas"
+  },
+  {
+    "id": 3,
+    "label": "Agregar tarjeta",
+    "href": "/agregar-tarjeta"
+  }
+]
