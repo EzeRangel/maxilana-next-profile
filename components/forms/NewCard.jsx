@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from "./Form.module.css";
 import cardStyles from "../ui/Card/Card.module.css";
 
 const INITIAL_VALUES = {
+  title: "",
   ccholder: "",
   ccnumber: "",
   ccexp: "",
@@ -11,15 +12,41 @@ const INITIAL_VALUES = {
 }
 
 const NewCard = () => {
-  const [ccholder, updateHolder] = React.useState("");
-  const [ccnumber, updateNumber] = React.useState("");
-  const [ccexp, setExpState] = React.useState("");
-  const [cvv, setCVVState] = React.useState("");
+  const [loading, setLoading] = useState(false);
+  const [title, setTitle] = useState("");
+  const [ccholder, updateHolder] = useState("");
+  const [ccnumber, updateNumber] = useState("");
+  const [ccexp, setExpState] = useState("");
+  const [cvv, setCVVState] = useState("");
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    console.log({ ccholder, ccnumber, ccexp, cvv });
+    try {
+      setLoading(true);
+      const params = {
+        title,
+        cvv,
+        ccexp,
+        ccholder,
+        cctype: "visa",
+        ccending: ccnumber,
+      };
+
+      console.log(params);
+
+      setTitle("");
+      updateHolder("");
+      updateNumber("");
+      setExpState("");
+      setCVVState("");
+    } catch (err) {
+      console.log("Ocurrió un error al agregar una tarjeta.");
+    } finally {
+      setLoading(false);
+    }
+
+        
   }
 
   return (
@@ -30,6 +57,22 @@ const NewCard = () => {
         </h6>
       </header>
       <form className={styles.root} onSubmit={handleFormSubmit}>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="title">Identificador de la tarjeta</label>
+          <input
+            className={styles.input}
+            id="title"
+            type="text"
+            placeholder="Tarjeta de nómina"
+            name="title"
+            value={title}
+            onChange={(evt) => {
+              const value = evt.target.value; // 1. Obtenemos el valor del input
+
+              setTitle(value); // 2. Actualizamos el state
+            }}
+          />
+        </div>
         <div className={styles.field}>
           <label className={styles.label} htmlFor="ccholder">Titular de la tarjeta</label>
           <input
@@ -92,7 +135,9 @@ const NewCard = () => {
           </div>
         </div>
         <div>
-          <button type="submit" className={styles.button}>Guardar tarjeta</button>
+          <button type="submit" className={styles.button} disabled={loading}>
+            {loading ? "Guardando tarjeta..." : "Guardar tarjeta"}
+          </button>
         </div>
       </form>
     </div>
