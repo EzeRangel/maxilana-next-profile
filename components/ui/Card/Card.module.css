@@ -1,0 +1,95 @@
+.root {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px 16px;
+  width: 360px;
+  box-shadow: 0 8px 10px #01437d1a;
+  margin-bottom: 12px;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 12px;
+  color: #00827e;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.removeButton {
+  background-color: #fff;
+  color: red;
+  font-size: 12px;
+  max-width: 30px;
+  padding: 2px;
+  text-align: center;
+}
+
+.cardType {
+  margin-bottom: 12px;
+}
+
+.cardNumber {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardNumberMask {
+  font-size: 40px;
+}
+
+.cardNumberMask span {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.cardNumberHidden {
+  height: 50px;
+  padding: 5px 0;
+  width: 60%;
+  background-color: lightgray;
+}
+
+.cardNumberToggle {
+  font-size: 10px;
+  width: auto;
+  padding: 4px 8px;
+  background-color: #01437d;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.theme-dark .root {
+  background-color: #3f3351;
+}
+
+.theme-dark .title {
+  color: #e9a6a6;
+}
+
+.theme-dark .cardNumberToggle {
+  background-color: #864879;
+  color: #fff;
+}

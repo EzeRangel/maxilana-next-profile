@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Menu } from "../components/ui";
+import { Menu, CreditCard } from "../components/ui";
 
 export default function Home() {
   return (
@@ -23,11 +23,19 @@ export default function Home() {
               Esta es la página de inicio de nuestro proyecto de tarjetas.
               Oprime la opción deseada.
             </p>
+            <CreditCard
+              title="Tarjeta de Nómina"
+              ccending={4967}
+              ccholder="Ezequiel Rangel"
+              ccexp="08/2023"
+              cctype="visa"
+            />
             <div
               style={{
                 display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around",
+                flexDirection: "column",
+                gap: 6,
+                maxWidth: 320,
               }}
             >
               <a className="button App__button">Ver mis tarjetas</a>
