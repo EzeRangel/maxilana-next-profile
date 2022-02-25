@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { MdOutlineFirstPage, MdOutlineLastPage } from 'react-icons/md';
 
 import useToggle from '../../../hooks/useToggle';
@@ -26,19 +25,13 @@ const Menu = () => {
       </header>
       <ul className="Menu__list">
         <li className="Menu__item">
-          <Link href="/">
-            Inicio
-          </Link>
+          Inicio
         </li>
         <li className="Menu__item">
-          <Link href="/">
-            Ver tarjetas
-          </Link>
+          Ver tarjetas
         </li>
         <li className="Menu__item">
-          <Link href="/agregar-tarjeta">
-            Agregar tarjeta
-          </Link>
+          Agregar tarjeta
         </li>
       </ul>
     </aside>
